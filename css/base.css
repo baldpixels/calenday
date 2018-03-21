@@ -1,0 +1,254 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  min-width: 720px;
+  min-height: 420px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  overflow: scroll;
+}
+
+#logo {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 6px;
+  left: 12px;
+}
+
+#selected_month {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 39px;
+  left: 33%;
+  transform: translate(-50%, 0);
+  text-transform: uppercase;
+  font-style: italic;
+  color: blue;
+}
+
+#next_month {
+  z-index: +1;
+  position: absolute;
+  top: 64px;
+  left: 33%;
+  transform: translate(100%);
+  margin: 0;
+}
+
+#prev_month {
+  z-index: +1;
+  position: absolute;
+  top: 64px;
+  left: 33%;
+  transform: translate(-100%);
+  margin: 0;
+}
+
+#user_controls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96px;
+}
+
+button {
+  padding: 3px;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: white;
+}
+
+#floater {
+  z-index: +2;
+  text-align: center;
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  padding: 0 12px 24px 12px;
+  background-color: rgb(216, 216, 216);
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px;
+}
+
+#floater_title {
+  text-decoration: underline;
+}
+
+#floater_cancel {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 1px 3px 1px 3px;
+  color: #ffcccc;
+}
+
+#login {
+  position: absolute;
+  left: 21px;
+  top: 48px;
+}
+
+#register {
+  position: absolute;
+  left: 72px;
+  top: 48px;
+}
+
+#logout {
+  position: absolute;
+  left: 21px;
+  top: 48px;
+}
+
+#user {
+  position: absolute;
+  left: 81px;
+  top: 54px;
+  color: blue;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+#calendar_body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#month_viewer {
+  position: absolute;
+  display: inline-grid;
+  grid-gap: 0;
+  grid-template-rows: 2.5%;
+  grid-template-columns: repeat(7, 14.3%);
+  left: 0;
+  top: 96px;
+  width: 66%;
+  height: 100%;
+  background-color: white;
+  border-top: 1px solid black;
+}
+
+.day_of_week {
+  text-align: center;
+  height: 33%;
+  padding: 3px 0 0 0;
+  margin: 0;
+  font-size: 10px;
+}
+
+#cell1 {
+  /* use js to adjust depending on month */
+  grid-column-start: 1;
+}
+
+.day_cell {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed blue;
+  background-color: white;
+}
+
+.cell_date {
+  position: relative;
+  top: 3px;
+  left: 3px;
+  width: 36px;
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.event_counter {
+  position: relative;
+  top: 21px;
+  right: 6px;
+  color: red;
+  font-weight: lighter;
+  font-size: 10px;
+}
+
+#events_viewer {
+  z-index: +1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 33%;
+  height: 100%;
+  background-color: #f6f6f6;
+  overflow: scroll;
+}
+
+#events_header {
+  position: absolute;
+  top: 12px;
+  left: 6px;
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+}
+
+#selected_date {
+  font-weight: bold;
+  color: blue;
+}
+
+#event_controls {
+  position: absolute;
+  top: 48px;
+  left: 12px;
+}
+
+#add_event {
+
+}
+
+#events {
+  position: absolute;
+  top: 96px;
+  left: 18px;
+  width: 100%;
+}
+
+.event {
+  width: 90%;
+  margin-bottom: 12px;
+  padding: 6px 0 6px 0;
+  border-bottom: 1px solid black;
+}
+
+.event_name {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.event_time {
+  font-size: 12px;
+}
+
+.delete_event {
+  display: inline;
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 1px 3px 1px 3px;
+  color: #ffcccc;
+}

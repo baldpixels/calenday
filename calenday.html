@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calenday</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <!-- append other stylesheets here depending on viewtype -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <!-- title -->
+    <h1 id="logo">Calenday</h1>
+
+    <!-- current month -->
+    <h2 id="selected_month"></h2>
+
+    <button id="prev_month" type="button"><</button>
+    <button id="next_month" type="button">></button>
+
+    <div id="floater">
+      <button id="floater_cancel" type="button">x</button>
+      <!-- floater comes down whenever user needs to enter info -->
+      <h3 id="floater_title"><!-- append form title here --></h3>
+
+      <div id="floater_form">
+        <!-- append form elements here -->
+      </div>
+    </div>
+
+    <div id="user_controls">
+      <!-- append user controls here -->
+    </div> <!-- end user_controls -->
+
+    <div id="calendar_body">
+      <div id="month_viewer">
+        <!-- append day cells here -->
+      </div>
+
+      <div id="events_viewer">
+        <h3 id="events_header">my events on <span id="selected_date"></span>...</h3>
+
+        <div id="event_controls">
+          <!-- append event controls here -->
+        </div>
+
+        <div id="events">
+          <!-- append events in selected day here -->
+        </div>
+      </div>
+    </div> <!-- end calendar_body -->
+
+    <!-- include scripts here -->
+    <script src="js/calenday_viewer.js" type="text/javascript"></script>
+  </body>
+</html>
